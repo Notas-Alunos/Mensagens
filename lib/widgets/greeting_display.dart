@@ -13,6 +13,12 @@ class GreetingDisplay extends StatelessWidget {
             onPressed: () {
               print('Botão clicado!');
             },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 10, 35, 41),
+              foregroundColor: Colors.white,
+              padding: EdgeInsets.all(16),
+              textStyle: TextStyle(fontSize: 18),
+            ),
             child: Text('Enviar'),
           ),
 
