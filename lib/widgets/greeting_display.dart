@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ButtonsModelDisplay.dart';
 
 class GreetingDisplay extends StatelessWidget {
   const GreetingDisplay({super.key});
@@ -9,17 +10,30 @@ class GreetingDisplay extends StatelessWidget {
       color: const Color.fromARGB(255, 212, 0, 255),
       child: Column(
         children: <Widget>[
-          ElevatedButton(
-            onPressed: () {
-              print('Botão clicado!');
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 10, 35, 41),
-              foregroundColor: Colors.white,
-              padding: EdgeInsets.all(16),
-              textStyle: TextStyle(fontSize: 18),
-            ),
-            child: Text('Enviar'),
+          Row(
+            children: [
+              const SizedBox(width: 8),
+              ButtonsModelDisplay(
+                text: 'Todos',
+                onPressed: () {
+                  print('Botão clicado!');
+                },
+              ),
+              const SizedBox(width: 8),
+              ButtonsModelDisplay(
+                text: 'Fixadas',
+                onPressed: () {
+                  print('Botão clicado!');
+                },
+              ),
+              const SizedBox(width: 8),
+              ButtonsModelDisplay(
+                text: 'Arquivadas',
+                onPressed: () {
+                  print('Botão clicado!');
+                },
+              ),
+            ],
           ),
 
           Text('Coluna 2'),
