@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';  // ← Importe o pacote
 import '../widgets/counter_display.dart';
+
 import '../widgets/greeting_display.dart';
 import '../widgets/other_column_display.dart';
 
@@ -25,39 +25,35 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //   title: Text(widget.title),
+      // ),
       body: Row(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          const SizedBox(width: 0),
+
           Expanded(
+            // Permite que o widget ocupe todo o espaço disponível ou o quanto você quiser. Ele só pode ter 1 filho
+            // Então, para criar colunas nele, você precisa criar uma coluna dentro do filho dele para que ele possa criar multiplus
+            // widgets
             flex: 1,
             child: Column(
-              children: <Widget>[
-                Expanded(child: CounterDisplay(counter: _counter)),
-              ],
+              children: <Widget>[CounterDisplay(counter: _counter)],
             ),
           ),
-
-          const Gap(16), // ← GAP horizontal de 16px!
 
           Expanded(
             flex: 3,
-            child: Column(
-              children: <Widget>[
-                Expanded(child: const GreetingDisplay()),
-              ],
-            ),
+            child: Column(children: <Widget>[const GreetingDisplay()]),
           ),
-
-          const Gap(0), // ← GAP horizontal de 16px!
 
           Expanded(
             flex: 6,
-            child: Column(
-              children: <Widget>[
-                Expanded(child: const OtherDisplay()),
-              ],
-            ),
-          )
+            child: Column(children: <Widget>[const OtherDisplay()]),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
