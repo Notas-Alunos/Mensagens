@@ -37,8 +37,6 @@ class GreetingDisplay extends StatelessWidget {
           // ),
 
           Text('Coluna 2'),
-          Text('Contagem de vezes que você pressionou o botão:'),
-          Text('Olá mundo!'),
         ],
       ),
     );
