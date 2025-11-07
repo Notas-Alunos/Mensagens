@@ -13,13 +13,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +22,7 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: CounterDisplay(counter: _counter)
+            child: CounterDisplay()
           ),
 
           Expanded(
@@ -43,12 +36,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

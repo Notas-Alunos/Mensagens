@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CounterDisplay extends StatelessWidget {
-  const CounterDisplay({super.key, required this.counter});
+  const CounterDisplay({super.key});
 
-  final int counter;
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +11,6 @@ class CounterDisplay extends StatelessWidget {
       child: Column(
         children: <Widget>[
           const Text('Coluna 1'),
-          const Text('Contagem de vezes que você pressionou o botão:'),
-
-          Text('$counter', style: Theme.of(context).textTheme.headlineMedium),
         ],
       ),
     );

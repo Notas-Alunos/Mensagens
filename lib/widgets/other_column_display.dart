@@ -14,7 +14,6 @@ class OtherDisplay extends StatelessWidget {
       child: Column(
         children: <Widget>[
         const Text('Coluna 3'),
-        const Text('Contagem de vezes que você pressionou o botão:'),
       ],
       ),
     );
