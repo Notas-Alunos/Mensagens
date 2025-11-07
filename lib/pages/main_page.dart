@@ -16,7 +16,7 @@ class MainPage extends StatelessWidget {
           ListTile(
             title: const Text('Estrutura do Whatsapp Web'),
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(title: 'title')));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
             },
           ),
         ],
