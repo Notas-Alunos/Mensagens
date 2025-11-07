@@ -20,24 +20,7 @@ class _CounterDisplayState extends State<CounterDisplay> {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromARGB(255, 0, 255, 136),
-      child: Row(
-        children: <Widget>[
-          NavigationRail(
-            selectedIndex: _selectedIndex,
-            onDestinationSelected: changeDestination,
-            destinations: const [
-              NavigationRailDestination(
-                icon: Icon(Icons.home),
-                label: Text('Home'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.settings),
-                label: Text('Configurações'),
-              ),
-            ],
-          ),
-        ],
-      ),
+      child: Text('Olá'),
     );
   }
 }

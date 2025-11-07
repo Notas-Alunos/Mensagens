@@ -7,7 +7,7 @@ class Routes {
   static const String main = '/main';
 
   static final Map<String, WidgetBuilder> routes = {
-    home: (context) => const HomePage(title: 'Flutter Demo Home Page'),
+    home: (context) => const HomePage(),
     main: (context) => const MainPage(),
   };
 }
