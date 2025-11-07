@@ -3,26 +3,36 @@ import '../widgets/counter_display.dart';
 import '../widgets/greeting_display.dart';
 import '../widgets/other_column_display.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Expanded(child: CounterDisplay()),
+          Expanded(
+            child: CounterDisplay(),
+          ),
 
-          Expanded(flex: 4, child: const GreetingDisplay()),
+          // GreetingDisplay
+          const Expanded(
+            flex: 4,
+            child: GreetingDisplay(),
+          ),
 
-          Expanded(flex: 6, child: const OtherDisplay()),
+          const Expanded(
+            flex: 6,
+            child: OtherDisplay(),
+          ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print('Botão pressionado');
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }

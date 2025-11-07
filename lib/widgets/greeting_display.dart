@@ -36,14 +36,14 @@ class GreetingDisplay extends StatelessWidget {
           //     ),
           //   ],
           // ),
-          CustomListTile(
-            title: 'ListTile',
-            subtitle: 'Última mensagem',
-            trailing: Icon(Icons.menu),
-            onTap: () {
-              print('Tile clicado!');
-            },
-          ),
+          // CustomListTile(
+          //   title: 'ListTile',
+          //   subtitle: 'Última mensagem',
+          //   trailing: Icon(Icons.menu),
+          //   onTap: () {
+          //     print('Tile clicado!');
+          //   },
+          // ),
 
           Text('Coluna 2'),
         ],
