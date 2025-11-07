@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';  // ← Importe o pacote
 import '../widgets/counter_display.dart';
 import '../widgets/greeting_display.dart';
+import '../widgets/other_column_display.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -23,23 +25,40 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Componente 1
-            CounterDisplay(counter: _counter),
-            
-            const SizedBox(height: 20), // Espaçamento
-            
-            // Componente 2
-            const GreetingDisplay(),
-          ],
-        ),
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            flex: 1,
+            child: Column(
+              children: <Widget>[
+                Expanded(child: CounterDisplay(counter: _counter)),
+              ],
+            ),
+          ),
+
+          const Gap(16), // ← GAP horizontal de 16px!
+
+          Expanded(
+            flex: 3,
+            child: Column(
+              children: <Widget>[
+                Expanded(child: const GreetingDisplay()),
+              ],
+            ),
+          ),
+
+          const Gap(0), // ← GAP horizontal de 16px!
+
+          Expanded(
+            flex: 6,
+            child: Column(
+              children: <Widget>[
+                Expanded(child: const OtherDisplay()),
+              ],
+            ),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

@@ -5,11 +5,15 @@ class GreetingDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: <Widget>[
+    return Container(
+      color: const Color.fromARGB(255, 212, 0, 255),
+      child: Column(
+        children: <Widget>[
+        Text ('Coluna 2'),
         Text('Contagem de vezes que você pressionou o botão:'),
         Text('Olá mundo!'),
       ],
+      )
     );
   }
 }
