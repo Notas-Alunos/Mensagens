@@ -29,39 +29,20 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: CounterDisplay(counter: _counter),
-                ),
-              ],
-            ),
+
+            child: CounterDisplay(counter: _counter)
           ),
 
-          const SizedBox(width: 16),
 
           Expanded(
             flex: 4,
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: const GreetingDisplay(),
-                ),
-              ],
-            ),
+            child: const GreetingDisplay()
           ),
 
-          const SizedBox(width: 16),
 
           Expanded(
             flex: 6,
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: const OtherDisplay(),
-                ),
-              ],
-            ),
+            child: const OtherDisplay()
           ),
         ],
       ),
