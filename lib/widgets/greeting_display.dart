@@ -9,11 +9,18 @@ class GreetingDisplay extends StatelessWidget {
       color: const Color.fromARGB(255, 212, 0, 255),
       child: Column(
         children: <Widget>[
-        Text ('Coluna 2'),
-        Text('Contagem de vezes que você pressionou o botão:'),
-        Text('Olá mundo!'),
-      ],
-      )
+          ElevatedButton(
+            onPressed: () {
+              print('Botão clicado!');
+            },
+            child: Text('Enviar'),
+          ),
+
+          Text('Coluna 2'),
+          Text('Contagem de vezes que você pressionou o botão:'),
+          Text('Olá mundo!'),
+        ],
+      ),
     );
   }
 }
