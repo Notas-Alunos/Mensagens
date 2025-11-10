@@ -3,6 +3,7 @@ import '../pages/home_page.dart';
 import '../pages/navigation_rail.dart';
 import '../pages/list_tile.dart';
 import '../pages/floating_action.dart';
+import '../pages/menu_anchor.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -37,6 +38,12 @@ class MainPage extends StatelessWidget {
             title: const Text('FloatingActionButton'),
             onTap: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => FloatingActionButtonPage()));
+            },
+          ),
+          ListTile(
+            title: const Text('MenuAnchor'),
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => MenuAnchorPage()));
             },
           ),
         ],
