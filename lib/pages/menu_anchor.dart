@@ -20,7 +20,7 @@ class MenuAnchorPage extends StatelessWidget {
                   controller.open();
                 }
               },
-              child: const Text('Abrir Menu'),
+              child: const Icon(Icons.menu),
             );
           },
           menuChildren: [
