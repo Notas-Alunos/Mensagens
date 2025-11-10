@@ -39,7 +39,7 @@ class _ListTilePageState extends State<ListTilePage> {
                   subtitle: Text('exemplo@email.com'),
                   onTap: () {
                     setState(() {
-                      selectedWidget = EmailDetail();
+                      selectedWidget = HomePage();
                     });
                   },
                 ),
@@ -81,15 +81,6 @@ class PersonDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text('Detalhes da Pessoa', style: TextStyle(fontSize: 24)),
-    );
-  }
-}
-
-class EmailDetail extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: HomePage(),
     );
   }
 }
