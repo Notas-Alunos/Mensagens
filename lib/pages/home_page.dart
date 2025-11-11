@@ -8,9 +8,17 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Row(
         children: [
-          Expanded(child: Container(color: Colors.red)),
-          Expanded(child: Container(color: Colors.green)),
-          Expanded(child: Container(color: Colors.blue)),
+          SizedBox(width: 50, child: Container(color: Colors.amber),),
+          SizedBox(width: 200, child: ListTile(
+              leading: Icon(Icons.favorite),
+              title: Text("Pedrinho Javeiro"),
+              subtitle: Text("vou te mandar um pix"),
+              onTap: () => {
+                
+              },
+            ),
+          ),
+          Expanded(child: Container(color: Colors.blue,)),
         ],
       ),
     );
